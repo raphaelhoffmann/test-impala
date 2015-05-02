@@ -4,6 +4,8 @@ DIRNAME=`dirname $0`
 
 . "${DIRNAME}/env_local.sh"
 
+impala-shell -q "CREATE DATABASE IF NOT EXISTS ${DBNAME};"
+
 cd $DEEPDIVE_HOME
 export PYTHONPATH=$DEEPDIVE_HOME/ddlib:$PYTHONPATH
 
